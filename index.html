@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Registro -->
+<div id="registro" class="hidden">
+    <h1>COLOMBMW</h1>
+    <h2>Registro</h2>
+    <input type="text" id="numeroRegistro" placeholder="Número de teléfono" required>
+    <input type="password" id="passwordRegistro" placeholder="Contraseña" required>
+    <input type="text" id="codigoInvitacion" placeholder="Código de Invitación (Opcional)">
+    <button onclick="registrar()">Registrar</button>
+    <p>¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Iniciar Sesión</a></p>
+</div>
+
+<!-- Inicio de Sesión -->
+<div id="login">
+    <h1>COLOMBMW</h1>
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="numeroLogin" placeholder="Número de teléfono" required>
+    <input type="password" id="passwordLogin" placeholder="Contraseña" required>
+    <button onclick="iniciarSesion()">Iniciar Sesión</button>
+    <p>¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
+</div>
+
+<!-- Página Principal -->
+<div id="principal" class="hidden">
+    <h1>COLOMBMW</h1>
+    <h2>Bienvenido</h2>
+    <p id="saldo"></p>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+    <h3>Opciones de Inversión</h3>
+    <div class="vip">
+        <img src="https://i.postimg.cc/j5sYsxzb/bmw-3.png" alt="VIP Image 1">
+        <h4>VIP 1</h4>
+        <p>Costo: $250000</p>
+        <p>Ingreso Diario: $3000</p>
+        <p>Días: 30</p>
+        <button onclick="invertir(25000, 3000, 30)">Invertir</button>
+    </div>
+    <div class="vip">
+        <img src="https://i.postimg.cc/6qqsvMjb/bmw-8.png" alt="VIP Image 1">
+        <h4>VIP 2</h4>
+        <p>Costo: $80000</p>
+        <p>Ingreso Diario: $10000</p>
+        <p>Días: 30</p>
+        <button onclick="invertir(80000, 10000, 30)">Invertir</button>
+    </div>
+    <div class="vip">
+        <img src="https://i.postimg.cc/66bxXNqk/bmw-ix3.png" alt="VIP Image 1">
+        <h4>VIP 3</h4>
+        <p>Costo: $150000</p>
+        <p>Ingreso Diario: $20000</p>
+        <p>Días: 30</p>
+        <button onclick="invertir(150000, 20000, 30)">Invertir</button>
+    </div>
+    <h3>Retirar Saldo</h3>
+<input type="number" id="cantidadDisminuir" placeholder="Cantidad a retirar">
+<button onclick="solicitarRetiroTelegram()">Solicitar Retiro</button>
+ 
+    <h3>Recargar Saldo</h3>
+    <input type="number" id="cantidadAgregar" placeholder="Cantidad a recargar">
+    <button onclick="solicitarRecargaTelegram()">Solicitar Recarga</button>
+</div>
+
+
+
+
+<!-- Panel Administrativo -->
+<div id="adminPanel" class="hidden">
+    <h1>COLOMBMW</h1>
+    <h3>Panel Administrativo</h3>
+    <p>Bienvenido, Administrador.</p>
+    <input type="text" id="usuarioSaldo" placeholder="Número del usuario">
+    <input type="number" id="cantidadSaldo" placeholder="Cantidad a agregar">
+    <button onclick="aumentarSaldo()">Aumentar Saldo</button>
+    <input type="number" id="cantidadRestar" placeholder="Cantidad a restar">
+    <button onclick="disminuirSaldo()">Disminuir Saldo</button>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+</div>
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</body>
+</html>

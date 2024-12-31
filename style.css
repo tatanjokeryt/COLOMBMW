@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 42px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+h2, h3, h4 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+input, button {
+    margin: 20px 0;
+    padding: 15px;
+    width: 85%;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #ecf0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.02);
+}
+
+button:active {
+    background-color: #1c598a;
+}
+
+.vip {
+    background-color: #fce4e4;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.vip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vip img {
+    height: 150px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#login, #registro, #principal, #adminPanel {
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1c7ed6;
+}
+
+#saldo {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+input[type="number"], input[type="text"] {
+    background-color: #ecf0f1;
+}
+
+#adminPanel input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px) {
+    body {
+        padding: 30px;
+    }
+    #login, #registro, #principal, #adminPanel {
+        width: 70%;
+    }
+
+    .vip {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    .vip img {
+        height: 200px;
+        width: 250px;
+    }
+
+    .vip h4, .vip p, .vip button {
+        margin-left: 20px;
+    }
+}
